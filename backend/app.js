@@ -10,14 +10,7 @@ const sauceRoutes = require('./routes/sauce');
 //Création d'une application express
 const app = express();
 
-//serve static assets if in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'));
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  });
-}
 
 // Connexion à la base de données
 mongoose.connect(process.env.MONGODB_URI,
