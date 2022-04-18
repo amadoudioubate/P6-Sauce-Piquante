@@ -10,6 +10,10 @@ const sauceRoutes = require('./routes/sauce');
 //Création d'une application express
 const app = express();
 
+app.get('/', (req, res) => {
+  console.log("Sauce piquante");
+})
+
 // Connexion à la base de données
 mongoose.connect(process.env.MONGODB_URI,
   { useNewUrlParser: true,

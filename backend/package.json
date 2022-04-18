@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node -r dotenv/config server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "amadou",
   "license": "ISC",
